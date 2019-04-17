@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+
+# ap: see/get more from https://github.com/angular/angular/blob/master/.gitignore
