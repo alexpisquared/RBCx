@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseTask } from '../model/base-task';
+import { BaseTasksMock } from '../service/mock-tasks';
 
 @Component({
   selector: 'app-top-tasks',
@@ -7,8 +8,12 @@ import { BaseTask } from '../model/base-task';
   styleUrls: ['./top-tasks.component.scss']
 })
 export class TopTasksComponent implements OnInit {
-  hero: BaseTask = { id: 1, name: 'Packing', done: false, progress: 33, subtasks: null };
+  tasks = BaseTasksMock;
+  selectedTask: BaseTask;
 
+  onSelect(task: BaseTask): void {
+    this.selectedTask = task;
+  }
   constructor() {}
 
   ngOnInit() {}

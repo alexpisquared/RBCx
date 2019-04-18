@@ -21,9 +21,10 @@ import { MaterialModule } from './material/material.module';
 import { TopTasksComponent } from './top-tasks/top-tasks.component';
 import { MatBtnComponent } from './mat-btn/mat-btn.component';
 import { FormsModule } from '@angular/forms';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, TopTasksComponent, MatBtnComponent],
+  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
