@@ -12,9 +12,10 @@ import { TopTasksComponent } from './top-tasks/top-tasks.component';
 import { MatBtnComponent } from './mat-btn/mat-btn.component';
 import { FormsModule } from '@angular/forms';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { TaskSubtasksComponent } from './task-subtasks/task-subtasks.component';
 
 @NgModule({
-  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent],
+  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
