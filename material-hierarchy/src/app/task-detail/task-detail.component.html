@@ -15,6 +15,8 @@
     <br />
     task.subtasks:
     <div *ngIf="task.subtasks">123</div>
+    <app-task-detail [task]="selectedTask"></app-task-detail>
+    <app-task-subtasks></app-task-subtasks>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button (click)="goBack()" matTooltip="Go back">

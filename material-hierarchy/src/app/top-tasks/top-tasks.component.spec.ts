@@ -4,6 +4,7 @@ import { TopTasksComponent } from './top-tasks.component';
 import { FormsModule } from '@angular/forms';
 import { TaskDetailComponent } from '../task-detail/task-detail.component';
 import { MaterialModule } from '../material/material.module';
+import { TaskSubtasksComponent } from '../task-subtasks/task-subtasks.component';
 
 describe('TopTasksComponent', () => {
   let component: TopTasksComponent;
@@ -12,7 +13,7 @@ describe('TopTasksComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [FormsModule, MaterialModule],
-      declarations: [TopTasksComponent, TaskDetailComponent]
+      declarations: [TopTasksComponent, TaskDetailComponent, TaskSubtasksComponent]
     }).compileComponents();
   }));
 
