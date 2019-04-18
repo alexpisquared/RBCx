@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { MaterialModule } from './material/material.module';
 import { TopTasksComponent } from './top-tasks/top-tasks.component';
 import { MatBtnComponent } from './mat-btn/mat-btn.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, TopTasksComponent, MatBtnComponent],
@@ -39,7 +40,8 @@ import { MatBtnComponent } from './mat-btn/mat-btn.component';
     MaterialModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
-    })
+    }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

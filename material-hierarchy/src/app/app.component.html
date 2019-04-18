@@ -2,6 +2,8 @@
   <mat-toolbar-row>
     <span>Third Line</span>
     <span class="example-spacer"></span>
+    <h6>Welcome to {{ title }}!</h6>
+    <span class="example-spacer"></span>
     <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
     <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
     <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">menu</mat-icon>
@@ -11,7 +13,6 @@
 <router-outlet></router-outlet>
 
 <div style="text-align:center">
-  <h6>Welcome to {{ title }}!</h6>
 </div>
 
-<!-- <app-top-tasks></app-top-tasks> -->
+<app-top-tasks></app-top-tasks>
