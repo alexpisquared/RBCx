@@ -7,26 +7,25 @@
     <div><span>id: </span>{{ task.id }}</div>
     <br />
     <div>
-      <label
-        >name:
-        <input [(ngModel)]="task.name" placeholder="name" />
-      </label>
+      <label>name:<input [(ngModel)]="task.name" placeholder="name"/></label>
     </div>
     <br />
     task.subtasks:
-    <div *ngIf="task.subtasks">123</div>
-    <app-task-detail [task]="selectedTask"></app-task-detail>
-    <app-task-subtasks></app-task-subtasks>
+    <div *ngIf="task.subtasks">
+      <app-task-subtasks [subtasks]="task.subtasks"></app-task-subtasks>
+    </div>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="goBack()" matTooltip="Go back">
-      <mat-icon>arrow_back</mat-icon>
-    </button>
-    <button mat-button>
-      <mat-icon>thumb_up</mat-icon>
-    </button>
-    <button mat-button>
-      <mat-icon>share</mat-icon>
-    </button>
+    <div style="text-align:center; background-color: #888; align-content: center; align-items: center; align-self: center; ">
+      <button mat-button (click)="goBack()" matTooltip="Go back">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
   </mat-card-actions>
 </mat-card>

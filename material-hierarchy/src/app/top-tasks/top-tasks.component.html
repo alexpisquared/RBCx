@@ -1,6 +1,6 @@
 <mat-grid-list cols="12" rowHeight="500px">
   <mat-grid-tile> </mat-grid-tile>
-  <mat-grid-tile [colspan]="4" [rowspan]="1">
+  <mat-grid-tile [colspan]="5" [rowspan]="1">
     <mat-card>
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
@@ -14,21 +14,23 @@
         </ul>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button (click)="goBack()" matTooltip="Go back">
-          <mat-icon>arrow_back</mat-icon>
-        </button>
-        <button mat-button>
-          <mat-icon>thumb_up</mat-icon>
-        </button>
-        <button mat-button>
-          <mat-icon>share</mat-icon>
-        </button>
+        <div style="text-align:center; background-color: #888; align-content: center; align-items: center; align-self: center; ">
+          <button mat-button (click)="goBack()" matTooltip="Go back">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <button mat-button>
+            <mat-icon>thumb_up</mat-icon>
+          </button>
+          <button mat-button>
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
-  <mat-grid-tile></mat-grid-tile>
   <mat-grid-tile [colspan]="5">
-    <div class="full-width-top">
+    <div>
+      <!-- <div class="full-width-top"> -->
       <app-task-detail [task]="selectedTask"></app-task-detail>
     </div>
   </mat-grid-tile>
