@@ -1,32 +1,12 @@
-<mat-grid-list cols="12" rowHeight="500px">
+<mat-grid-list cols="12" rowHeight="850px">
   <mat-grid-tile> </mat-grid-tile>
   <mat-grid-tile [colspan]="5" [rowspan]="1">
-    <mat-card>
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Top Tasks</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <ul class="tasks">
-          <li *ngFor="let task of tasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
-            <span class="badge">{{ task.id }}</span> {{ task.name }}
-          </li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-        <div style="text-align:center; background-color: #888; align-content: center; align-items: center; align-self: center; ">
-          <button mat-button (click)="goBack()" matTooltip="Go back">
-            <mat-icon>arrow_back</mat-icon>
-          </button>
-          <button mat-button>
-            <mat-icon>thumb_up</mat-icon>
-          </button>
-          <button mat-button>
-            <mat-icon>share</mat-icon>
-          </button>
-        </div>
-      </mat-card-actions>
-    </mat-card>
+    <ul class="tasks">
+      <li *ngFor="let task of tasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
+        <!-- <span class="badge">{{ task.id }}</span> {{ task.name }} -->
+        <app-task-detail [task]="task"></app-task-detail>
+      </li>
+    </ul>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="5">
     <div>

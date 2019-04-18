@@ -26,8 +26,8 @@ export const BaseTasksMock: BaseTask[] = [
   { id: 3, name: 'Address', done: false, progress: 33, subtasks: null },
   { id: 4, name: 'Utilits', done: false, progress: 33, subtasks: null },
   { id: 5, name: 'Internet', done: false, progress: 33, subtasks: null },
-  { id: 6, name: 'Insurance', done: false, progress: 33, subtasks: null },
-  { id: 7, name: 'Savings', done: false, progress: 33, subtasks: null },
-  { id: 8, name: 'Tips', done: false, progress: 33, subtasks: null },
-  { id: 9, name: 'Enjoy', done: false, progress: 33, subtasks: null }
+  // { id: 6, name: 'Insurance', done: false, progress: 33, subtasks: null }
+  // { id: 7, name: 'Savings', done: false, progress: 33, subtasks: null },
+  // { id: 8, name: 'Tips', done: false, progress: 33, subtasks: null },
+  // { id: 9, name: 'Enjoy', done: false, progress: 33, subtasks: null }
 ];

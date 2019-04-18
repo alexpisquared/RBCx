@@ -1,21 +1,17 @@
 <mat-card *ngIf="task">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{ task.name | uppercase }} - Details</mat-card-title>
+    <img mat-card-avatar src="https://weather.gc.ca/weathericons/0{{ task.id }}.gif" />
+    <mat-card-title>{{ task.name | uppercase }}&nbsp;-&nbsp;{{ task.progress }}&nbsp;% </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <div><span>id: </span>{{ task.id }}</div>
-    <br />
-    <div>
+    <!-- 
       <label>name:<input [(ngModel)]="task.name" placeholder="name"/></label>
-    </div>
-    <br />
-    task.subtasks:
+     -->
     <div *ngIf="task.subtasks">
       <app-task-subtasks [subtasks]="task.subtasks"></app-task-subtasks>
     </div>
   </mat-card-content>
-  <mat-card-actions>
+  <!-- <mat-card-actions>
     <div style="text-align:center; background-color: #888; align-content: center; align-items: center; align-self: center; ">
       <button mat-button (click)="goBack()" matTooltip="Go back">
         <mat-icon>arrow_back</mat-icon>
@@ -27,5 +23,5 @@
         <mat-icon>share</mat-icon>
       </button>
     </div>
-  </mat-card-actions>
+  </mat-card-actions> -->
 </mat-card>
