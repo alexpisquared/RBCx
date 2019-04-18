@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TopTasksComponent } from './top-tasks.component';
+import { FormsModule } from '@angular/forms';
 
 describe('TopTasksComponent', () => {
   let component: TopTasksComponent;
@@ -8,9 +9,9 @@ describe('TopTasksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopTasksComponent ]
-    })
-    .compileComponents();
+      imports: [FormsModule],
+      declarations: [TopTasksComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

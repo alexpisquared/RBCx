@@ -3,11 +3,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { TopTasksComponent } from './top-tasks/top-tasks.component';
 import { MaterialModule } from './material/material.module';
+import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, MaterialModule],
+      imports: [RouterTestingModule, MaterialModule, FormsModule],
       declarations: [AppComponent, TopTasksComponent]
     }).compileComponents();
   }));

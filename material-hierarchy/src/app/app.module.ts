@@ -38,10 +38,10 @@ import { FormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatSortModule,
     MaterialModule,
+    FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
-    }),
-    FormsModule
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
