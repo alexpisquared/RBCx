@@ -5,17 +5,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedTask">
-  <h2>{{ selectedTask.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{ selectedTask.id }}</div>
-  <div>
-    <label
-    >name:
-    <input [(ngModel)]="selectedTask.name" placeholder="name" />
-  </label>
-</div>
-</div>
-<!-- 
-
-<app-task-detail [task]="selectedTask"></app-task-detail> 
--->
+<app-task-detail [task]="selectedTask"></app-task-detail>

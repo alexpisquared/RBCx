@@ -4,12 +4,13 @@ import { AppComponent } from './app.component';
 import { TopTasksComponent } from './top-tasks/top-tasks.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, MaterialModule, FormsModule],
-      declarations: [AppComponent, TopTasksComponent]
+      declarations: [AppComponent, TopTasksComponent, TaskDetailComponent]
     }).compileComponents();
   }));
 
