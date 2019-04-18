@@ -1,10 +1,26 @@
-<div *ngIf="task">
-  <h2>{{ task.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{ task.id }}</div>
-  <div>
-    <label
-      >name:
-      <input [(ngModel)]="task.name" placeholder="name" />
-    </label>
-  </div>
-</div>
+<mat-card *ngIf="task">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ task.name | uppercase }} - Details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div><span>id: </span>{{ task.id }}</div>
+    <div>
+      <label
+        >name:
+        <input [(ngModel)]="task.name" placeholder="name" />
+      </label>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="goBack()" matTooltip="Go back">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-button>
+      <mat-icon>thumb_up</mat-icon>
+    </button>
+    <button mat-button>
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

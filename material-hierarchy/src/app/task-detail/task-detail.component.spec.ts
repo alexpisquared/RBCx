@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaskDetailComponent } from './task-detail.component';
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
 
 describe('TaskDetailComponent', () => {
   let component: TaskDetailComponent;
@@ -9,7 +10,7 @@ describe('TaskDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule, MaterialModule],
       declarations: [TaskDetailComponent]
     }).compileComponents();
   }));
