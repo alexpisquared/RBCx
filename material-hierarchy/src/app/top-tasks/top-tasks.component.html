@@ -1,6 +1,5 @@
-<mat-grid-list cols="12" rowHeight="850px">
-  <mat-grid-tile> </mat-grid-tile>
-  <mat-grid-tile [colspan]="5" [rowspan]="1">
+<mat-grid-list cols="12" rowHeight="92%" gutterSize="5px">
+  <mat-grid-tile [colspan]="6" [rowspan]="1">
     <ul class="tasks">
       <li *ngFor="let task of tasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
         <!-- <span class="badge">{{ task.id }}</span> {{ task.name }} -->
@@ -8,11 +7,10 @@
       </li>
     </ul>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="5">
+  <mat-grid-tile [colspan]="6">
     <div>
       <!-- <div class="full-width-top"> -->
       <app-task-detail [task]="selectedTask"></app-task-detail>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile></mat-grid-tile>
 </mat-grid-list>
