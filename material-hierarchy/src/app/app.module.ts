@@ -10,7 +10,7 @@ import { environment } from '../environments/environment';
 import { MaterialModule } from './material/material.module';
 import { TopTasksComponent } from './top-tasks/top-tasks.component';
 import { MatBtnComponent } from './mat-btn/mat-btn.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { TaskSubtasksComponent } from './task-subtasks/task-subtasks.component';
 import { XHierStepperComponent } from './x-hier-stepper/x-hier-stepper.component';
@@ -24,6 +24,7 @@ import { XHierStepperComponent } from './x-hier-stepper/x-hier-stepper.component
     LayoutModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     })

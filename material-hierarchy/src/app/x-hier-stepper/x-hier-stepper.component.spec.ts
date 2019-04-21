@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { XHierStepperComponent } from './x-hier-stepper.component';
+import { MaterialModule } from '../material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // RFM - probably redyndant
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('XHierStepperComponent', () => {
   let component: XHierStepperComponent;
@@ -8,9 +11,9 @@ describe('XHierStepperComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ XHierStepperComponent ]
-    })
-    .compileComponents();
+      imports: [FormsModule, ReactiveFormsModule, MaterialModule, BrowserAnimationsModule],
+      declarations: [XHierStepperComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
