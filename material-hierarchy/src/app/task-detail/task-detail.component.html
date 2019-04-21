@@ -1,14 +1,22 @@
 <mat-card *ngIf="task">
   <mat-card-header>
-    <img mat-card-avatar src="https://weather.gc.ca/weathericons/0{{ task.id }}.gif" />
+    <img mat-card-avatar src="{{ task.imgurl }}" alt="{{ task.imgurl }}" />
     <mat-card-title>{{ task.name | uppercase }}&nbsp;-&nbsp;{{ task.progress }}&nbsp;% </mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <!-- 
       <label>name:<input [(ngModel)]="task.name" placeholder="name"/></label>
      -->
-    <div *ngIf="task.subtasks">
-      <app-task-subtasks [subtasks]="task.subtasks"></app-task-subtasks>
+    <br />
+    <div>
+      <ng-container *ngIf="task.subtasks; then loggedIn; else loggedOut"> </ng-container>
+      <ng-template #loggedIn>
+        {{ task.subtasks.length }} subtasks.
+        <!-- not here: <app-task-subtasks [subtasks]="task.subtasks"></app-task-subtasks> -->
+      </ng-template>
+      <ng-template #loggedOut>
+        <i> No subtasks found for this task. </i>
+      </ng-template>
     </div>
   </mat-card-content>
   <!-- <mat-card-actions>

@@ -1,16 +1,23 @@
 <mat-grid-list cols="12" rowHeight="92%" gutterSize="5px">
-  <mat-grid-tile [colspan]="6" [rowspan]="1">
-    <ul class="tasks">
-      <li *ngFor="let task of tasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
-        <!-- <span class="badge">{{ task.id }}</span> {{ task.name }} -->
-        <app-task-detail [task]="task"></app-task-detail>
-      </li>
-    </ul>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="6">
-    <div>
-      <!-- <div class="full-width-top"> -->
-      <app-task-detail [task]="selectedTask"></app-task-detail>
+  <mat-grid-tile [colspan]="3" [rowspan]="1">
+    <div class="full-width-top">
+      <ul class="tasks">
+        <li *ngFor="let task of tasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
+          <!-- <span class="badge">{{ task.id }}</span> {{ task.name }} -->
+          <app-task-detail [task]="task"></app-task-detail>
+        </li>
+      </ul>
     </div>
   </mat-grid-tile>
+  <mat-grid-tile [colspan]="3" [rowspan]="1">
+    <div class="full-width-top" *ngIf="selectedTask">
+      <ul class="tasks">
+        <li *ngFor="let task of selectedTask.subtasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
+          <!-- <span class="badge">{{ task.id }}</span> {{ task.name }} -->
+          <app-task-detail [task]="task"></app-task-detail>
+        </li>
+      </ul>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="3"> </mat-grid-tile>
 </mat-grid-list>
