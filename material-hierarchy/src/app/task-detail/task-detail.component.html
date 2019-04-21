@@ -1,6 +1,6 @@
 <mat-card *ngIf="task">
   <mat-card-header>
-    <img mat-card-avatar src="{{ task.imgurl }}" alt="{{ task.imgurl }}" />
+    <img mat-card-avatar src="https://weather.gc.ca/weathericons/{{ task.imgurl }}.gif" alt="{{ task.imgurl }}" />
     <mat-card-title>{{ task.name | uppercase }}&nbsp;-&nbsp;{{ task.progress }}&nbsp;% </mat-card-title>
   </mat-card-header>
   <mat-card-content>
@@ -9,14 +9,12 @@
      -->
     <br />
     <div>
-      <ng-container *ngIf="task.subtasks; then loggedIn; else loggedOut"> </ng-container>
-      <ng-template #loggedIn>
+      <ng-container *ngIf="task.subtasks; then branchView; else leafView"> </ng-container>
+      <ng-template #branchView>
         {{ task.subtasks.length }} subtasks.
         <!-- not here: <app-task-subtasks [subtasks]="task.subtasks"></app-task-subtasks> -->
       </ng-template>
-      <ng-template #loggedOut>
-        <i> No subtasks found for this task. </i>
-      </ng-template>
+      <ng-template #leafView> Is done: <input [(ngModel)]="task.done" type="checkbox" name="doneFlag" id="doneFlag" /> </ng-template>
     </div>
   </mat-card-content>
   <!-- <mat-card-actions>

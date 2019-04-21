@@ -1,6 +1,6 @@
 /* TasksComponent's private CSS styles */
 .selected {
-  background-color: #CFD8DC !important;
+  background-color: rgb(40, 146, 199) !important;
   color: white;
 }
 .tasks {
@@ -16,11 +16,11 @@
   background-color: #EEE;
   // margin: .5em;
   padding: .3em 0;
-  height: 7em;
+  height: 5.437em;
   border-radius: 4px;
 }
 .tasks li.selected:hover {
-  background-color: #BBD8DC !important;
+  background-color: rgb(57, 191, 209) !important;
   color: white;
 }
 .tasks li:hover {

@@ -1,6 +1,6 @@
 <div *ngIf="subtasks">
   <!-- <div>{{ subtasks.length }} subtasks:</div> -->
-  <li *ngFor="let task of subtasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
+  <li *ngFor="let task of subtasks" [class.selected]="task === selectedTask1" (click)="onSelect1(task)">
     <span class="badge">{{ task.id }}</span> {{ task.name }}
   </li>
 </div>

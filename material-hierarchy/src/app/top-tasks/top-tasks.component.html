@@ -2,7 +2,7 @@
   <mat-grid-tile [colspan]="3" [rowspan]="1">
     <div class="full-width-top">
       <ul class="tasks">
-        <li *ngFor="let task of tasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
+        <li *ngFor="let task of tasks" [class.selected]="task === selectedTask1" (click)="onSelect1(task)">
           <!-- <span class="badge">{{ task.id }}</span> {{ task.name }} -->
           <app-task-detail [task]="task"></app-task-detail>
         </li>
@@ -10,14 +10,22 @@
     </div>
   </mat-grid-tile>
   <mat-grid-tile [colspan]="3" [rowspan]="1">
-    <div class="full-width-top" *ngIf="selectedTask">
+    <div class="full-width-top" *ngIf="selectedTask1">
       <ul class="tasks">
-        <li *ngFor="let task of selectedTask.subtasks" [class.selected]="task === selectedTask" (click)="onSelect(task)">
-          <!-- <span class="badge">{{ task.id }}</span> {{ task.name }} -->
+        <li *ngFor="let task of selectedTask1.subtasks" [class.selected]="task === selectedTask2" (click)="onSelect2(task)">
           <app-task-detail [task]="task"></app-task-detail>
         </li>
       </ul>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile [colspan]="3"> </mat-grid-tile>
+  <mat-grid-tile [colspan]="5" [rowspan]="1">
+    <div class="full-width-top" *ngIf="selectedTask2">
+      <ul class="tasks">
+        <li *ngFor="let task of selectedTask2.subtasks" [class.selected]="task === selectedTask3" (click)="onSelect3(task)">
+          <app-task-detail [task]="task"></app-task-detail>
+        </li>
+      </ul>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="1"> </mat-grid-tile>
 </mat-grid-list>
