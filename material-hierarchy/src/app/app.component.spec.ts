@@ -21,16 +21,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'material-hierarchy'`, () => {
+  it(`should have as title 'MoveSnap POC'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('material-hierarchy');
+    expect(app.title).toEqual('MoveSnap POC');
   });
 
   it('should render title in a h6 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h6').textContent).toContain('Welcome to material-hierarchy!');
+    expect(compiled.querySelector('h6').textContent).toContain('Welcome to MoveSnap POC!');
   });
 });
