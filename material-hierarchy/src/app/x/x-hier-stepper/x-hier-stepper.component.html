@@ -1,7 +1,8 @@
 <div class="routeroutlet">
-  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear" style="margin: 50px auto;">
     {{ !isLinear ? 'Enable linear mode' : 'Disable linear mode' }}
   </button>
+  <br />
   <mat-horizontal-stepper [linear]="isLinear" #stepper>
     <mat-step>
       <ng-template matStepLabel>Start</ng-template>
