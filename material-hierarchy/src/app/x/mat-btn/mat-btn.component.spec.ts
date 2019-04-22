@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MatBtnComponent } from './mat-btn.component';
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from '../../material/material.module';
 
 describe('MatBtnComponent', () => {
   let component: MatBtnComponent;

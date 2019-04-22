@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { XHierStepperComponent } from './x-hier-stepper.component';
-import { MaterialModule } from '../material/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // RFM - probably redyndant
+import { MaterialModule } from '../../material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // RFM - probably redundant
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('XHierStepperComponent', () => {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseTask } from '../model/base-task';
 import { BaseTasksMock } from '../service/mock-tasks';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-top-tasks',
@@ -8,6 +9,9 @@ import { BaseTasksMock } from '../service/mock-tasks';
   styleUrls: ['./top-tasks.component.scss']
 })
 export class TopTasksComponent implements OnInit {
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
   tasks = BaseTasksMock;
   selectedTask1: BaseTask;
   selectedTask2: BaseTask;
@@ -27,7 +31,14 @@ export class TopTasksComponent implements OnInit {
     this.selectedTask4 = task;
   }
 
-  constructor() {}
+  constructor(private formBuilder0: FormBuilder) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.firstFormGroup = this.formBuilder0.group({
+      firstCtrl: ['', Validators.required]
+    });
+    this.secondFormGroup = this.formBuilder0.group({
+      secondCtrl: ['', Validators.required]
+    });
+  }
 }

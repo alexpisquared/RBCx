@@ -1,10 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TopTasksComponent } from './top-tasks.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailComponent } from '../task-detail/task-detail.component';
 import { MaterialModule } from '../material/material.module';
 import { TaskSubtasksComponent } from '../task-subtasks/task-subtasks.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('TopTasksComponent', () => {
   let component: TopTasksComponent;
@@ -12,7 +13,7 @@ describe('TopTasksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, MaterialModule],
+      imports: [FormsModule, ReactiveFormsModule, MaterialModule, BrowserAnimationsModule],
       declarations: [TopTasksComponent, TaskDetailComponent, TaskSubtasksComponent]
     }).compileComponents();
   }));

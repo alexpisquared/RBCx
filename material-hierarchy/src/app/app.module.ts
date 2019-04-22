@@ -9,11 +9,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MaterialModule } from './material/material.module';
 import { TopTasksComponent } from './top-tasks/top-tasks.component';
-import { MatBtnComponent } from './mat-btn/mat-btn.component';
+import { MatBtnComponent } from './x/mat-btn/mat-btn.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { TaskSubtasksComponent } from './task-subtasks/task-subtasks.component';
-import { XHierStepperComponent } from './x-hier-stepper/x-hier-stepper.component';
+import { XHierStepperComponent } from './x/x-hier-stepper/x-hier-stepper.component';
 
 @NgModule({
   declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent, XHierStepperComponent],

@@ -4,12 +4,21 @@
     <span class="example-spacer"></span>
     <h6>Welcome to {{ title }}!</h6>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">menu</mat-icon>
+    <button mat-button routerLink="/" matTooltip="Go to Home page">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">home</mat-icon>
+    </button>
+    <button mat-button routerLink="/x">
+      <mat-icon aria-label="Example icon-button with a heart icon">start</mat-icon>
+    </button>
+    <button mat-button routerLink="/b">
+      <mat-icon aria-label="Example icon-button with a heart icon">stop</mat-icon>
+    </button>
+    <!-- <button mat-button routerLink="/my-projects">My Projets</button> -->
+    <!-- <button mat-button routerLink="/contact">Contact</button> 
+      <button mat-button (click)="toggleTheme()" matTooltip="Toggles the theme">Theme</button>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">menu</mat-icon>
+    -->
   </mat-toolbar-row>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
-
-<app-top-tasks></app-top-tasks>
