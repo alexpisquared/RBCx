@@ -14,9 +14,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { TaskSubtasksComponent } from './task-subtasks/task-subtasks.component';
 import { XHierStepperComponent } from './x/x-hier-stepper/x-hier-stepper.component';
+import { AddressComponent } from './_shared/address/address.component';
 
 @NgModule({
-  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent, XHierStepperComponent],
+  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent, XHierStepperComponent, AddressComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
