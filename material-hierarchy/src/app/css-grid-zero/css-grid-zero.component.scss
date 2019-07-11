@@ -1,0 +1,13 @@
+.grid-demo {
+  display: grid;
+}
+
+.demo-1 {
+  grid-template-columns: auto auto;
+}
+
+@media screen and (min-width: 476px) {
+  .demo-1 {
+    grid-template-columns: auto auto auto;
+  }
+}

@@ -15,9 +15,10 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { TaskSubtasksComponent } from './task-subtasks/task-subtasks.component';
 import { XHierStepperComponent } from './x/x-hier-stepper/x-hier-stepper.component';
 import { AddressComponent } from './_shared/address/address.component';
+import { CssGridZeroComponent } from './css-grid-zero/css-grid-zero.component';
 
 @NgModule({
-  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent, XHierStepperComponent, AddressComponent],
+  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent, XHierStepperComponent, AddressComponent, CssGridZeroComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
