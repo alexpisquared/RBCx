@@ -1,17 +1,81 @@
-<h1>Feb 16 2019</h1>
-<h3>https://www.tutsmake.com/new-angular-7-upload-file-image-example/</h3>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <h3>Choose File</h3>
-      <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <input type="file" name="image" />
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary">Submit</button>
-        </div>
-      </form>
+<mat-card style="margin: 20px; float: left;">
+  <mat-card-header>
+    <img mat-card-avatar src="https://weather.gc.ca/weathericons/00.gif" alt="00.gif" />
+    <mat-card-title>
+      <a href="https://www.tutsmake.com/new-angular-7-upload-file-image-example">Feb 16 2019<small>new-angular-7-upload-file-image-example</small></a>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="file" name="image" accept=".xls,.xlsx,.csv" />
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <br />
+  </mat-card-content>
+  <mat-card-actions>
+    <div style="text-align:center; background-color: #888; align-content: center; align-items: center; align-self: center; ">
+      <button mat-button (click)="goBack()" matTooltip="Go back">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>share</mat-icon>
+      </button>
     </div>
-  </div>
-</div>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card style="margin: 20px; float: left;">
+  <mat-card-header>
+    <img mat-card-avatar src="https://weather.gc.ca/weathericons/40.gif" alt="00.gif" />
+    <mat-card-title>
+      Todo
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">existing page/component? which one?</li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">api entry done?</li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"></li>
+</ul>
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item"></li>
+</ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <div style="text-align:center; background-color: #888; align-content: center; align-items: center; align-self: center; ">
+      <button mat-button (click)="goBack()" matTooltip="Go back">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon>share</mat-icon>
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>
