@@ -16,9 +16,11 @@ import { TaskSubtasksComponent } from './task-subtasks/task-subtasks.component';
 import { XHierStepperComponent } from './x/x-hier-stepper/x-hier-stepper.component';
 import { AddressComponent } from './_shared/address/address.component';
 import { CssGridZeroComponent } from './css-grid-zero/css-grid-zero.component';
+import { Feb2019Component } from './file-upload/feb2019/feb2019.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent, XHierStepperComponent, AddressComponent, CssGridZeroComponent],
+  declarations: [AppComponent, TopTasksComponent, MatBtnComponent, TaskDetailComponent, TaskSubtasksComponent, XHierStepperComponent, AddressComponent, CssGridZeroComponent, Feb2019Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +31,8 @@ import { CssGridZeroComponent } from './css-grid-zero/css-grid-zero.component';
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
