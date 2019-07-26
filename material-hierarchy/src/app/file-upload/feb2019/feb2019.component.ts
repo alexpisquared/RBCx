@@ -7,18 +7,19 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./feb2019.component.scss']
 })
 export class Feb2019Component implements OnInit {
-  fileData = null;
-  constructor(private http: HttpClient) {}
+  csvFileData = null;
 
-  ngOnInit() {}
+  constructor(private http: HttpClient) { }
 
-  fileProgress(fileInput: any) {
-    this.fileData = fileInput.target.files[0] as File;
-  }
+  ngOnInit() { }
+
+  fileProgress(fileInput: any) { this.csvFileData = fileInput.target.files[0] as File; }
+
+  uploadFile() { this.onSubmit(); }
 
   onSubmit() {
     const formData = new FormData();
-    formData.append('file', this.fileData);
+    formData.append('file', this.csvFileData);
     this.http.post('url/to/your/api', formData).subscribe(res => {
       console.log(res);
       alert('SUCCESS !!');

@@ -11,8 +11,9 @@
   <mat-card-content>
     <form (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <input type="file" name="image" accept=".xls,.xlsx,.csv" />
+        <input type="file" accept=".csv" />
         <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-secondary" (click)="uploadFile()">Submit</button>
       </div>
     </form>
     <br />
